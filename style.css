@@ -187,6 +187,68 @@ main{
     padding-left: 20px;
 }
 
+/* destination section */
+
+.destination-container{
+    text-align: center;
+    margin: 100px auto;
+}
+
+.destination-container h1{
+    color: #131318;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.destination-container p{
+    color: rgba(19, 19, 24, 0.70);
+    padding: 24px 0;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-grid{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    margin: 24px 0;
+}
+
+.image-grid .row1, .image-grid .row2, .image-grid .row3{
+    display: flex;
+    gap: 24px;
+}
+
+.image-grid span{
+    position: relative;
+}
+
+.row1 span>p, .row2 span>p, .row3 span>p{
+    position: absolute;
+    z-index: 3;
+    top: 40%;
+    color: #FFF;
+    font-size: 1.75rem;
+    font-weight: 800;
+    right: 40%;
+}
+
+.row2 span>p{
+    right: 30%
+}
+
+.row3 span>p{
+    right: 35%;
+}
+
+
+
 /*! media queries */
 
 /* for small devices */
@@ -196,7 +258,7 @@ main{
         display: none;
     }
 
-    .bookings, .blog-container{
+    .bookings, .blog-container, .image-grid, .row1, .row2, .row3{
         flex-direction: column;
         gap: 30px;
     }
@@ -208,11 +270,11 @@ main{
         height: 700px;
     }
 
-    .banner-content h1{
+    .banner-content h1, .blog-content h1, .destination-container h1{
         font-size: 1.375rem;
     }
 
-    .banner-content p{
+    .banner-content p, .blog-content p, .blog-content li, .destination-container>p{
         font-size: 0.875rem;
         width: 80%;
     }
@@ -234,13 +296,36 @@ main{
     }
 
     .blog-container img{
-        width: 95vw;
+        width: 90vw;
+    }
+
+    .image-grid img{
+        width: 90vw;
+    }
+
+    .image-grid img{
+        width: 90vw;
+        height: 300px;
+    }
+
+    .row1 span>p, .row2 span>p, .row3 span>p{
+        top:40%;
+        right: 40%;
+    }
+
+    .row2 span:nth-child(2)>p{
+        right: 35%;
+        top: 35%
+    }
+
+    .row3 span>p{
+        right: 35%;
     }
 }
 
 /* for medium devices */
 @media screen and (max-width: 992px) and (min-width: 600px) {
-    nav, .bookings, .blog-container{
+    nav, .bookings, .blog-container, .image-grid, .row1, .row2, .row3{
         flex-direction: column;
         gap: 30px;
     }
@@ -272,6 +357,25 @@ main{
 
     .blog-content{
         width: 100%;
+    }
+
+    .image-grid img{
+        width: 580px;
+        height: 300px;
+    }
+
+    .row1 span>p, .row2 span>p, .row3 span>p{
+        top:40%;
+        right: 40%;
+    }
+
+    .row2 span:nth-child(2)>p{
+        right: 35%;
+        top: 35%
+    }
+
+    .row3 span>p{
+        right: 35%;
     }
 }
 
