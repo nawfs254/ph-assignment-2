@@ -369,6 +369,10 @@ main{
     padding: 50px;
 }
 
+.left{
+    left: 5%;
+}
+
 .card .package-details div {
     display: flex;
     gap: 24px;
