@@ -315,6 +315,198 @@ main{
     line-height: 26px;
 }
 
+/* package-section */
+
+.package-container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.package-content h1{
+    color: #131318;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.package-content p{
+    color: rgba(19, 19, 24, 0.70);
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    padding: 24px 0;
+}
+
+/* cards */
+
+.package-cards{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.card{
+    margin: auto;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+}
+
+.card .package-details{
+    position: absolute;
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    right: 5%;
+    top: 15%;
+    width: 570px;
+    height: auto;
+    padding: 50px;
+}
+
+.card .package-details div {
+    display: flex;
+    gap: 24px;
+}
+.card .package-details div i{
+    padding-right: 8px;
+}
+
+.card .package-details div span i{
+    color: #FF5400;
+}
+
+.card .package-details div span{
+    color: #5A5A5D;
+}
+
+.card .package-details h1{
+    color: #131318;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 20px 0;
+}
+
+.card .package-details  .budget{
+    color: #FF5400;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 16px 0;
+}
+
+.card .package-details p{
+    color: #5A5A5D;
+    line-height: 26px;
+}
+
+.show-more{
+    margin: auto;
+}
+
+/* video section */
+
+.video-container{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video-content{
+    width: 40%;
+}
+
+.video-content h1{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #131318;
+}
+
+.video-content p{
+    font-weight: 700;
+    color: #131318;
+    line-height: 26px;
+    padding: 24px 0;
+}
+
+.video-container iframe{
+    border-radius: 8px;
+}
+
+/* newsletter section */
+
+.newsletter-container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-around;
+    margin: 100px 0;
+}
+
+.newsletter-form h4{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #131318;
+}
+
+.newsletter-form{
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid #FF5400;
+    padding: 42px;
+    height: 424px;
+}
+
+.newsletter-form p{
+    line-height: 26px;
+    padding: 24px 0;
+}
+
+.newsletter-form hr{
+    border: 1px solid rgba(19, 19, 24, 0.10);
+}
+
+.newsletter-form form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.newsletter-form form input{
+    border-radius: 8px;
+    background: rgba(19, 19, 24, 0.05);
+    width: 390px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 20px;
+    border: none;
+}
+.newsletter-container .image{
+    position: relative;
+}
+.newsletter-container image img{
+    position: absolute;
+}
+
+.newsletter-container .tagged-card{
+    position: absolute;
+    border-radius: 16px;
+    background: #FF5400;
+    padding: 16px;
+    width: fit-content;
+    text-align: center;
+    color: #FFF;
+    bottom: 15%;
+    right: 1%;
+    transform: rotate(-40deg);
+}
+
 /*! media queries */
 
 /* for small devices */
@@ -324,7 +516,7 @@ main{
         display: none;
     }
 
-    .bookings, .blog-container, .image-grid, .row1, .row2, .row3{
+    .bookings, .blog-container, .image-grid, .row1, .row2, .row3, .video-container, .newsletter-container{
         flex-direction: column;
         gap: 30px;
     }
@@ -336,11 +528,11 @@ main{
         height: 700px;
     }
 
-    .banner-content h1, .blog-content h1, .destination-container h1, .testimonial-content h1{
+    .banner-content h1, .blog-content h1, .destination-container h1, .testimonial-content h1, .card .package-details h1, .package-content h1, .video-content h1{
         font-size: 1.375rem;
     }
 
-    .banner-content p, .blog-content p, .blog-content li, .destination-container>p, .testimonial-content p{
+    .banner-content p, .blog-content p, .blog-content li, .destination-container>p, .testimonial-content p,.card .package-details p, .package-content p,.video-content p{ 
         font-size: 0.875rem;
         width: 80%;
     }
@@ -393,11 +585,51 @@ main{
         height: auto;
         padding: 20px;
     }
+
+    .package-details div{
+        flex-wrap: wrap;
+    }
+
+    .card img{
+        width: 100%;
+        height: 500px;
+    }
+
+    .card .package-details{
+        width: auto;
+        left: 5%;
+        bottom: 5%;
+        padding: 20px;
+    }
+
+    .video-content{
+        width: 100%;
+    }
+
+    .video-container iframe{
+        width: 90vw;
+    }
+
+    .newsletter-container .image{
+        width: 80vw;
+    }
+
+    .newsletter-form{
+        width: 90vw;
+    }
+
+    .newsletter-form form input{
+        width: 100%;
+    }
+
+    .newsletter-container .image img{
+        width: 100%;
+    }
 }
 
 /* for medium devices */
 @media screen and (max-width: 992px) and (min-width: 600px) {
-    nav, .bookings, .blog-container, .image-grid, .row1, .row2, .row3{
+    nav, .bookings, .blog-container, .image-grid, .row1, .row2, .row3, .video-container, .newsletter-container{
         flex-direction: column;
         gap: 30px;
     }
@@ -448,6 +680,24 @@ main{
 
     .row3 span>p{
         right: 35%;
+    }
+
+    .package-container p{
+        width: 100%;
+    }
+
+    .card img{
+        width: 100%;
+        height: 500px;
+    }
+
+    .card .package-details{
+        width: auto;
+        left: 5%;
+    }
+
+    .video-content{
+        width: 100%;
     }
 }
 
