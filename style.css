@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;800&display=swap');
+
+/* shared styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+.btn-primary{
+    border: none;
+    border-radius: 8px;
+    background-color: #FF5400;
+    padding: 16px 35px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #FFF;
+    font-weight: 700;
+    justify-content: center;
+}
+
+/* header section */
+
+header{
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+/* nav */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title .siteName{
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+.title .siteName span{
+    color: #FF5400;
+}
+
+.hamburgerMenu{
+    display: none;
+}
+
+
+/* manus */
+
+.menu{
+    display: flex;
+    gap: 40px;
+}
+
+.menu li{
+    list-style-type: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    text-align: center;
+    color: #424247;
+    margin: 10px;
+    transition: all 0.2s linear;
+}
+
+.menu li a:hover{
+    color: #FF5400;
+    font-weight: 700;
+}
+
+
+/* banner section */
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+}
+
+.overlay{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
+    border-radius: 16px;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-content{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content h1{
+    color: #FFF;
+    font-size: 4rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.banner-content>p{
+    color: #FFF;
+    line-height: 26px;
+    text-align: center;
+    max-width: 700px;
+    padding: 24px 0;
+}
+
+/* bookings div */
+
+.bookings{
+    background: rgba(255, 255, 255, 0.30); 
+    display: flex;
+    gap: 24px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.bookings input, .bookings select{
+    box-sizing: border-box;
+    width: 174px;
+    height: 52px;
+    padding: 16px;
+    color: rgba(19, 19, 24, 0.50);
+    border: none;
+    border-radius: 8px;
+}
+
+/*! media queries */
+
+/* for small devices */
+
+@media screen and (max-width:600px) {
+    .menu{
+        display: none;
+    }
+
+    .bookings{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .hamburgerMenu{
+        display: block;
+    }
+    .banner img, .overlay, .banner-content{
+        height: 700px;
+    }
+
+    .banner-content h1{
+        font-size: 1.375rem;
+    }
+
+    .banner-content p{
+        font-size: 0.875rem;
+        width: 80%;
+    }
+
+    .bookings{
+        width: 80%;
+    }
+
+    .bookings input, .bookings select{
+        width: auto;
+    }
+}
+
+/* for medium devices */
+@media screen and (max-width: 992px) and (min-width: 600px) {
+    nav, .bookings{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .banner img, .overlay, .banner-content{
+        height: 800px;
+    }
+
+    .banner-content p{
+        width: 80%;
+    }
+
+    .bookings{
+        width: 80%;
+    }
+
+    .bookings input, .bookings select{
+        width: auto;
+    }
+}
+
