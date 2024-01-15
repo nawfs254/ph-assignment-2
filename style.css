@@ -149,6 +149,44 @@ nav{
     border-radius: 8px;
 }
 
+/* main section */
+
+main{
+    width: 80%;
+    margin: 600px auto 100px auto;
+}
+
+.blog-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-content{
+    width: 40%;
+}
+
+.blog-content h1{
+    color: #131318;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.blog-content p{
+    line-height: 26px;
+    color: rgba(19, 19, 24, 0.70);
+    padding: 24px 0;
+}
+
+.blog-content li{
+    line-height: 26px;
+    color: rgba(19, 19, 24, 0.70);
+}
+
+.blog-content ul{
+    padding-left: 20px;
+}
+
 /*! media queries */
 
 /* for small devices */
@@ -158,7 +196,7 @@ nav{
         display: none;
     }
 
-    .bookings{
+    .bookings, .blog-container{
         flex-direction: column;
         gap: 30px;
     }
@@ -186,11 +224,23 @@ nav{
     .bookings input, .bookings select{
         width: auto;
     }
+
+    main{
+        margin: 800px auto 100px auto;
+    }
+
+    .blog-content{
+        width: 100%;
+    }
+
+    .blog-container img{
+        width: 95vw;
+    }
 }
 
 /* for medium devices */
 @media screen and (max-width: 992px) and (min-width: 600px) {
-    nav, .bookings{
+    nav, .bookings, .blog-container{
         flex-direction: column;
         gap: 30px;
     }
@@ -204,7 +254,7 @@ nav{
         height: 800px;
     }
 
-    .banner-content p{
+    .banner-content p, .banner-content h1{
         width: 80%;
     }
 
@@ -214,6 +264,14 @@ nav{
 
     .bookings input, .bookings select{
         width: auto;
+    }
+
+    main{
+        margin: 900px auto 100px auto;
+    }
+
+    .blog-content{
+        width: 100%;
     }
 }
 
