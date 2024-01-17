@@ -636,7 +636,6 @@ footer .copyright{
     color: #FFF;
     font-size: 1.75rem;
     font-weight: 800;
-
     line-height: 28px;
 }
 
@@ -648,6 +647,7 @@ footer .copyright{
 .card1{
     background-image: url(./assets/Images/Maldives.png);
 }
+
 
 .card2{
     background-image: url(./assets/Images/Indonasia.png);
@@ -841,6 +841,10 @@ footer .copyright{
 
     .image-grids span{
         height: auto;
+    }
+
+    .newsletter-container .tagged-card{
+        bottom: 27%;
     }
 }
 
